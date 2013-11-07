@@ -1,0 +1,12 @@
+<div ng-controller="PortfoliosController" ng-init="find()">
+    <ul class="unstyled">
+        <h2>Portfolios</h2>
+        <li ng-repeat="portfolio in portfolios">
+            <a href="#!/portfolios/{{ portfolio._id }}">{{portfolio.name}}</a>
+            (<a href="#!/portfolios/{{ portfolio._id }}/edit">Edit</a>)
+            (<a href="" ng-click="remove(portfolio)">Remove</a>)
+        </li>
+    </ul>
+    <br>
+    <a href="#!/portfolios/create">Create a new portfolio</a>
+</div>

@@ -1,0 +1,11 @@
+<div ng-controller="EtfsController" ng-init="find()">
+    <ul class="unstyled">
+        <h2>Etfs</h2>
+        <li ng-repeat="etf in etfs">
+            <a href="#!/etfs/{{ etf._id }}">{{etf.name}}</a>
+        </li>
+    </ul>
+    <br>
+    <a href="#!/etfs/create">Create a new etf</a>
+</div>
+

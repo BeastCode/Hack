@@ -1,0 +1,13 @@
+<div ng-controller="PortfoliosController" ng-init="findOne()">
+    <h2>{{ portfolio.name }}</h2>
+    <p><strong>Owner: </strong>{{ portfolio.owner.name }}</p>
+    <p><strong>Game: </strong>{{ portfolio.game.name }}</p>
+	<p><strong>Value: </strong>$1,070,532</p>
+	<p><strong>Cash: </strong>$50,000</p>
+    <p><strong>Funds:</strong></p>
+    <ul>
+        <li ng-repeat="fund in portfolio.funds">{{ fund }}</li>
+    </ul>
+    <br>
+    <a href="#!/portfolios">View all portfolios</a>
+</div>

@@ -1,0 +1,15 @@
+<div ng-controller="EtfsController" ng-init="find()">
+    <input type="text" ng-model="search.name" placeholder="Fund name">
+    <br/>
+    <etftype></etftype>
+    <ul class="unstyled">
+        <h2>Funds</h2>
+        <li ng-repeat="etf in etfs | filter:search | filter:strictsearch:true">
+            <a href="#!/etfs/{{ etf._id }}">{{etf.name}}</a>
+        </li>
+    </ul>
+</div>
+
+
+
+

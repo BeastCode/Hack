@@ -1,0 +1,13 @@
+<div ng-controller="GamesController" ng-init="find()">
+    <ul class="unstyled">
+        <h2>Games</h2>
+        <li ng-repeat="game in games">
+            <a href="#!/games/{{ game._id }}">{{game.name}}</a>
+            (<a href="#!/games/{{ game._id }}/edit">Edit</a>)
+            (<a href="" ng-click="remove(game)">Remove</a>)
+        </li>
+    </ul>
+    <br>
+    <a href="#!/games/create">Create a new game</a>
+</div>
+

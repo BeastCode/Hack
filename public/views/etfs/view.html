@@ -1,0 +1,13 @@
+<div ng-controller="EtfsController" ng-init="findOne()">
+    <h2>{{ etf.name }}</h2>
+
+    <p><strong>Ticker: </strong>{{ etf.ticker }}</p>
+    <p><strong>Name: </strong>{{ etf.desc }}</p>
+    <p><strong>Category: </strong>{{ etf.type }}</p>
+    <a href="http://us.ishares.com/product_info/fund/performance/{{ etf.ticker }}.htm" target="_blank">Performance</a>
+    &nbsp;
+    <a href="http://us.ishares.com/product_info/fund/overview/{{ etf.ticker }}.htm" target="_blank">Overview</a>
+    &nbsp;
+    <a href="http://us.ishares.com/product_info/fund/holdings/{{ etf.ticker }}.htm" target="_blank">Holdings</a>
+    <br>
+</div>

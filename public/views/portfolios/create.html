@@ -1,0 +1,28 @@
+<div ng-controller="PortfoliosController">
+    <form class="form-horizontal" ng-submit="create()" ng-init="populateGames()">
+        <div class="control-group">
+            <label class="control-label" for="name">Name</label>
+
+            <div class="controls">
+                <input type="text" ng-model="portfolio.name" id="name" placeholder="Name">
+            </div>
+            <br/>
+            <label class="control-label" for="game">Game</label>
+
+            <div class="controls">
+                <select
+                        ng-model="portfolio.game"
+                        name="game"
+                        required="required"
+                        ng-options="c._id as c.name for c in games">
+                    <option value="">Choose a game:</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <input type="submit" class="btn">
+            </div>
+        </div>
+    </form>
+</div>

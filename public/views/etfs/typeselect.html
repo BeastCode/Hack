@@ -1,0 +1,4 @@
+<select ng-model="strictsearch.type">
+    <option value="">Category</option>
+    <option ng-repeat="etf in etfs" value="{{ etf.type }}">{{ etf.type }}</option>
+</select>
